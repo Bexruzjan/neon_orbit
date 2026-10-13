@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Neon Orbit</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon-192.png">
+<meta name="theme-color" content="#00ffff">
+<meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="ui">
+        <div id="score">0</div>
+    </div>
+    <div id="overlay">
+        <h1>NEON ORBIT</h1>
+        <p>Нажми, чтобы прыгнуть на следующую орбиту</p>
+        <button onclick="startGame()">СТАРТ</button>
+    </div>
+    <canvas id="canvas"></canvas>
+    <script src="script.js"></script>
+    <script>
+        // Регистрация service worker для работы офлайн
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js').catch(() => {});
+            });
+        }
+    </script>
+</body>
+</html>

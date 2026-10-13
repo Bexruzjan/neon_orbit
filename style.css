@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    background: #050505;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+    user-select: none;
+}
+
+#canvas {
+    display: block;
+    touch-action: none; /* Убирает системные жесты */
+    -webkit-tap-highlight-color: transparent;
+}
+
+#ui {
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    text-align: center;
+    pointer-events: none;
+    z-index: 5;
+}
+
+#score {
+    font-size: 5rem;
+    font-weight: 900;
+    color: #0ff;
+    opacity: 0.15;
+}
+
+#overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    letter-spacing: 8px;
+    color: #0ff;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    margin-bottom: 10px;
+}
+
+p { color: #888; margin-bottom: 30px; }
+
+button {
+    padding: 16px 50px;
+    background: transparent;
+    border: 2px solid #0ff;
+    color: #0ff;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+button:active {
+    background: #0ff;
+    color: #000;
+}
